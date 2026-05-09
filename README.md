@@ -5,7 +5,7 @@
 
 ### Bài 2: SỬ DỤNG DJANGO ĐỂ TẠO WEB QUẢN LÝ TIỆM CẦM ĐỒ
 
-#### tóm tắt: đã chạy được
+#### *tóm tắt: đã chạy được
 
 #### 1. TỔ CHỨC CSDL CHO HỆ THỐNG QUẢN LÝ TIỆM CẦM ĐỒ:
 ###### csdl:
