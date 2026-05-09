@@ -27,7 +27,7 @@ services:
     image: mariadb:10.11
     restart: always
     environment:
-      MYSQL_DATABASE: camdo_db_opensource_bt2_k3y4
+      MYSQL_DATABASE: camdo_db
       MYSQL_USER: user_camdo
       MYSQL_PASSWORD: 123456
       MYSQL_ROOT_PASSWORD: 123456
@@ -101,3 +101,24 @@ sửa file django_app/quanly/models.py:
 <img width="406" height="152" alt="image" src="https://github.com/user-attachments/assets/c37dd50a-d00a-4151-bee1-8ccdf6b0648f" />
 
 ##### Chạy hệ thống và Tạo dữ liệu
+###### Tạo file Migration:
+chạy: docker compose exec web python manage.py makemigrations quanly
+<img width="826" height="161" alt="image" src="https://github.com/user-attachments/assets/98ad997d-a3ef-4807-bcca-014243c56368" />
+
+###### tạo bảng dữ liệu trong MariaDB:
+chạy: docker compose exec web python manage.py migrate
+<img width="707" height="194" alt="image" src="https://github.com/user-attachments/assets/155d71fc-23df-43ff-ace8-33ff3a7cd58a" />
+
+###### Tạo tài khoản quản trị (Superuser):
+chạy: docker compose exec web python manage.py createsuperuser
+<img width="498" height="185" alt="image" src="https://github.com/user-attachments/assets/1be28211-2959-401d-893b-592f6e937362" />
+
+##### Database:
+<img width="224" height="85" alt="image" src="https://github.com/user-attachments/assets/9185a1f2-2627-4034-8fae-cf3c8bb9aa59" />
+
+#### Nhập dữ liệu từ trang admin:
+###### đường dẫn: http://172.30.171.9:8000/admin
+(ip của ubuntu :8000.....)
+<img width="870" height="489" alt="image" src="https://github.com/user-attachments/assets/e56f8c40-123e-4e16-b082-9027a9bd3137" />
+###### sử dụng tài khoản admin đã tạo ở trên
+<img width="672" height="444" alt="image" src="https://github.com/user-attachments/assets/df55cdf3-b206-4993-94d2-665c726ed0cb" />
