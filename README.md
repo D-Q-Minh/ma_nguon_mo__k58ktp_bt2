@@ -135,3 +135,23 @@ chạy: docker compose exec web python manage.py createsuperuser
 ###### trang chủ đã hiển thị
 <img width="1158" height="257" alt="image" src="https://github.com/user-attachments/assets/fe26f9a2-7ee9-4bc2-99ed-5fcaf5f3aa1a" />
 
+### cloudflare tunnel để public kết quả lên 1 sub-domain:
+#### sub-domain: https://camdo.tnut58ktp047.id.vn/
+###### tải cloudflared, login cloudflare: cloudflared tunnel login
+tạo tunnel: cloudflared tunnel create camdo-tunnel
+Trỏ Sub-domain về Tunnel: cloudflared tunnel route dns camdo-tunnel camdo.tnut58ktp047.id.vn
+<img width="1126" height="37" alt="image" src="https://github.com/user-attachments/assets/e4285f65-7ac8-4289-8811-ebdf8ff24c96" />
+###### cloudflare/DNS:
+<img width="715" height="57" alt="image" src="https://github.com/user-attachments/assets/c13c3365-936c-4922-8b5b-74cc28c8d23e" />
+
+##### kích hoạt tunnel:
+###### kiểm tra nhanh: cloudflared tunnel run --url http://127.0.0.1:8000 camdo-tunnel
+<img width="1148" height="250" alt="image" src="https://github.com/user-attachments/assets/d1f9b613-ee09-40f4-b834-0ae57e39f125" />
+###### kiểm tra với điện thoại sử dụng mạng khác:
+<img width="590" height="1280" alt="f616ed5bbe4d3f13665c" src="https://github.com/user-attachments/assets/a795fbfe-f83a-46fe-a790-4e1a2d60d654" />
+###### tắt terminal ubuntu là dừng
+
+##### chạy ngầm: nohup cloudflared tunnel run --url http://127.0.0.1:8000 camdo-tunnel > tunnel.log 2>&1 &
+##### tắt terminal ubuntu, 
+##### kiểm tra: máy tính và điện thoại đều có thể truy cập
+<img width="955" height="563" alt="image" src="https://github.com/user-attachments/assets/c946b741-19c6-41ca-9e9b-1454754e6aac" />
