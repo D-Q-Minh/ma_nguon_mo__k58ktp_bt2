@@ -67,3 +67,24 @@ mysqlclient==2.2.0
 <img width="738" height="407" alt="image" src="https://github.com/user-attachments/assets/1bf7cb75-c0d7-4d4f-8163-bb7454ac7487" />
 
 ##### chạy: docker compose run --rm web django-admin startproject camdo_pro .
+##### docker compose up -d
+<img width="753" height="166" alt="image" src="https://github.com/user-attachments/assets/a3007aa6-be19-4926-a29d-0b15a14b87f2" />
+<img width="1107" height="430" alt="image" src="https://github.com/user-attachments/assets/9d2c1842-a806-4f44-a647-02523ed38a89" />
+
+##### cấu hình database:
+###### file django_app/camdo_pro/settings.py:
+sửa mục DATABASES
+<img width="648" height="25" alt="image" src="https://github.com/user-attachments/assets/03e9cfd1-1ca6-462f-bb47-3fd35a865ac2" />
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'camdo_db',
+        'USER': 'user_camdo',
+        'PASSWORD': '123456',
+        'HOST': 'db',
+        'PORT': '3306',
+    }
+}
+ALLOWED_HOSTS = ['*'] # Cho phép Cloudflare truy cập
+```
