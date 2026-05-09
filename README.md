@@ -66,4 +66,4 @@ mysqlclient==2.2.0
 <img width="571" height="54" alt="image" src="https://github.com/user-attachments/assets/39ede1bd-472f-4c5e-bb1c-3c0d1b3eacf3" />
 <img width="738" height="407" alt="image" src="https://github.com/user-attachments/assets/1bf7cb75-c0d7-4d4f-8163-bb7454ac7487" />
 
-##### 
+##### chạy: docker compose run --rm web django-admin startproject camdo_pro .
