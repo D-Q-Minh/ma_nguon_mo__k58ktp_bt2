@@ -18,7 +18,42 @@ pawnshop/
 ```
 ##### file docker-compose.yml:
 ```
+version: '3.8'
 
+services:
+  db:
+    image: mariadb:10.11
+    restart: always
+    environment:
+      MYSQL_DATABASE: camdo_db_opensource_bt2_k3y4
+      MYSQL_USER: user_camdo
+      MYSQL_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+
+  web:
+    build: ./django_app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./django_app:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
 ```
 ##### File django_app/requirements.txt
 ```
