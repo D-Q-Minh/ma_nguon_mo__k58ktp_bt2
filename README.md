@@ -88,3 +88,16 @@ DATABASES = {
 }
 ALLOWED_HOSTS = ['*'] # Cho phép Cloudflare truy cập
 ```
+<img width="515" height="247" alt="image" src="https://github.com/user-attachments/assets/753e675c-ce67-436b-9dd3-653674bab37c" />
+
+##### Định nghĩa các bảng (Models):
+###### tạo app quanly (quản lý)
+lệnh: docker compose exec web python manage.py startapp quanly
+sửa file django_app/quanly/models.py:
+<img width="605" height="38" alt="image" src="https://github.com/user-attachments/assets/e669d038-2720-488f-8a17-5c2d1e6924ab" />
+<img width="769" height="426" alt="image" src="https://github.com/user-attachments/assets/10e9af12-cf5c-41ee-806f-0fa0b5bc323a" />
+
+##### Sửa file django_app/quanly/admin.py để có giao diện thêm/xóa/sửa:
+<img width="406" height="152" alt="image" src="https://github.com/user-attachments/assets/c37dd50a-d00a-4151-bee1-8ccdf6b0648f" />
+
+##### Chạy hệ thống và Tạo dữ liệu
