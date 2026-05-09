@@ -15,6 +15,8 @@
 pawnshop/
 ├── docker-compose.yml
 ├── django_app/
+    ├── requirements.txt
+    ├── Dockerfile
 ```
 ##### file docker-compose.yml:
 ```
@@ -60,4 +62,8 @@ volumes:
 django==4.2
 mysqlclient==2.2.0
 ```
+##### File django_app/Dockerfile
+<img width="571" height="54" alt="image" src="https://github.com/user-attachments/assets/39ede1bd-472f-4c5e-bb1c-3c0d1b3eacf3" />
+<img width="738" height="407" alt="image" src="https://github.com/user-attachments/assets/1bf7cb75-c0d7-4d4f-8163-bb7454ac7487" />
+
 ##### 
