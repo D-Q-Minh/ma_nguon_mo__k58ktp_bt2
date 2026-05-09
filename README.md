@@ -121,4 +121,17 @@ chạy: docker compose exec web python manage.py createsuperuser
 (ip của ubuntu :8000.....)
 <img width="870" height="489" alt="image" src="https://github.com/user-attachments/assets/e56f8c40-123e-4e16-b082-9027a9bd3137" />
 ###### sử dụng tài khoản admin đã tạo ở trên
+##### nhập dữ liệu:
 <img width="672" height="444" alt="image" src="https://github.com/user-attachments/assets/df55cdf3-b206-4993-94d2-665c726ed0cb" />
+<img width="787" height="450" alt="image" src="https://github.com/user-attachments/assets/6b01b112-6c74-4890-803d-6f586b3df4ea" />
+<img width="558" height="517" alt="image" src="https://github.com/user-attachments/assets/cf989637-dd67-4422-9c11-c116b094a7e0" />
+<img width="445" height="497" alt="image" src="https://github.com/user-attachments/assets/694b1f0d-60c5-4d2a-9a79-9c64a429ec71" />
+###### dữ liệu đã có trong mariadb:
+<img width="699" height="244" alt="image" src="https://github.com/user-attachments/assets/c1f41bcc-e898-4974-a330-7d0994701858" />
+
+###### tạo file html giao diện cho trang chủ
+
+#### Trang chủ
+###### trang chủ đã hiển thị
+<img width="1158" height="257" alt="image" src="https://github.com/user-attachments/assets/fe26f9a2-7ee9-4bc2-99ed-5fcaf5f3aa1a" />
+
